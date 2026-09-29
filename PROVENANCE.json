@@ -1,0 +1,39 @@
+{
+  "package": "obix-sdk-core",
+  "dir": "core/obix-sdk-core",
+  "importedBy": "scripts/recovery/generate-shims.mjs",
+  "stage": "stage-7 compat shim (authored-in-recovery; no upstream code)",
+  "replaces": {
+    "name": "@obinexusltd/obix-sdk-core",
+    "source": "upstream:obix-sdk@1269cfa:obix-sdk/packages/sdk/obix-core",
+    "integrity": null
+  },
+  "owner": "obix-core-runtime",
+  "surface": "docs/recovery/shim-surface.json",
+  "decision": "compat-shim (docs/recovery/migration-table.md; obix-naming.json legacyShims, kind documented)",
+  "entries": {
+    ".": {
+      "values": 4,
+      "types": 10,
+      "removed": [],
+      "missingTypes": []
+    }
+  },
+  "localFixes": [],
+  "renamedFrom": [
+    {
+      "name": "@obinexusltd/obix-sdk-core",
+      "dir": "core/obix-sdk-core",
+      "stage": "unscoped-naming",
+      "why": "D-102 (2026-09-29): OBIX packages are named without an npm scope — previous name @obinexusltd/obix-sdk-core, current name obix-sdk-core (docs/recovery/unscoped-migration.md); the directory, version and exports are unchanged"
+    }
+  ],
+  "export": {
+    "from": "https://github.com/obinexusmk2/obix-monorepo",
+    "branch": "recovery/obix-api-preserving-rebuild",
+    "commit": "69cafc94910c1add865a520877617ac307668875",
+    "directory": "core/obix-sdk-core",
+    "exportedBy": "scripts/release/export-repos.mjs",
+    "note": "a clean initial commit of this package; the monorepo history is not imported (D-103). Local machine paths in this record are replaced by <local workspace>."
+  }
+}
